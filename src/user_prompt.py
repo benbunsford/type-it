@@ -2,6 +2,7 @@ from enum import Enum
 import random
 
 from ascii.ascii_characters import ascii_characters
+from ascii.words import long_words, medium_words, short_words
 
 
 class Difficulty(Enum):
@@ -15,15 +16,15 @@ class Difficulty(Enum):
 def get_keylist(difficulty) -> list:
     match difficulty:
         case Difficulty.EASY:
-            return ['f', 'j']
+            return short_words
         case Difficulty.MEDIUM:
-            return ['f', 'j', 'd', 'k']
+            return short_words + medium_words
         case Difficulty.HARD:
-            return ['a']
+            return medium_words
         case Difficulty.SUPER_HARD:
-            return ['b']
+            return medium_words + long_words
         case Difficulty.IMPOSSIBLE:
-            return ['c']
+            return long_words
         case _:
             raise Exception("Error getting keylist: No valid difficulty selected.")
 

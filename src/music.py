@@ -13,11 +13,17 @@ class MusicPlayer:
         self.sfid = self.fs.sfload(sound_font)
         self.fs.program_select(0, self.sfid, 0, 0)
         self.speed = 1.0
+        self._stop_flag = False
 
     def play(self):
         mid = MidiFile(song)
+        self._stop_flag = False
 
         for msg in mid:
+            if self._stop_flag == True:
+                for chan in range(16):
+                    self.fs.all_sounds_off(chan)
+                break
             if msg.time > 0:
                 time.sleep(msg.time/self.speed)
             if msg.type == 'note_on':
@@ -33,9 +39,11 @@ class MusicPlayer:
         self.speed *= 1.005
 
     def play_async(self):
-        thread = threading.Thread(target=self.play)
+        thread = threading.Thread(target=self.play, daemon=True)
         thread.start()
+        return thread
 
     def stop(self):
-        self.fs.delete()
+        self._stop_flag = True
+        #self.fs.delete()
 
