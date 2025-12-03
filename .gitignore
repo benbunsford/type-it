@@ -2,4 +2,4 @@ src/ascii/
 plan.md
 .env
 src/__pycache__/
-.sf2
+src/music/undertale.sf2
