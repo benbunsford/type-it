@@ -12,5 +12,5 @@ dependencies = [
     "pyfluidsynth>=1.3.4",
 ]
 [project.scripts]
-type-it = "typeitnow.main:main"
+typeitnow = "typeitnow.main:main"
 

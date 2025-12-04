@@ -1,6 +1,6 @@
-from user_prompt import select_difficulty, select_random_key, key_to_art
-from music import MusicPlayer
-from game_over import game_over
+from .user_prompt import select_difficulty, select_random_key, key_to_art
+from .music import MusicPlayer
+from .game_over import game_over
 import sys
 from inputimeout import inputimeout,TimeoutOccurred
 import time

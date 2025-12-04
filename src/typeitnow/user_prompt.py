@@ -1,8 +1,8 @@
 from enum import Enum
 import random
 
-from ascii.ascii_characters import ascii_characters
-from ascii.words import long_words, medium_words, short_words
+from .ascii.ascii_characters import ascii_characters
+from .ascii.words import long_words, medium_words, short_words
 
 
 class Difficulty(Enum):
