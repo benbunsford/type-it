@@ -26,11 +26,10 @@ to install it here: [FluidSynth Download](https://github.com/FluidSynth/fluidsyn
     pip install typeitnow
     ```
 
-3. Add the .sf2 file so the audio sounds right.
-    - Download `undertale.sf2` from the latest Github Release page in this
-repository - [release page](https://github.com/benbunsford/typeitnow/releases/tag/v0.1.0-alpha)
-    - Put it in `typeitnow/src/music`
-4. Run typeitnow in your terminal.
+3. Run typeitnow in your terminal. It will automatically download `typeitnow/undertale.sf2`
+to your user cache directory, which varies by OS. You can find the exact
+directory in the [platformdirs documentation](https://pypi.org/project/platformdirs/),
+just in case you want to delete it later.
 
     ```sh
     typeitnow
