@@ -1,7 +1,7 @@
 
 # typeitnow
 
-typeitnow is a terminal-based game inspired by Bop It.
+typeitnow is a HIGH-PRESSURE terminal-based game inspired by Bop It.
 As the player, you're tasked with typing in the words presented
 to you before the timer runs out.
 It has multiple difficulties, and can be played for fun
@@ -13,8 +13,13 @@ Maybe I'll add it back as an option. Hope you have fun! :)
 
 ## OS
 
-typeitnow works on Linux. It should work on Mac and Windows as well,
-but has not been tested.
+typeitnow works on Linux and Windows. On Mac, there may be an SSL
+license issue. For me, this was resolved by installing python with
+the installer provided by [python.org](python.org), and afterwards
+navigating to `/Applications/Python 3.x/` then double-clicking
+`Install Certificates.command`.
+
+Tested on Arch Linux, Windows 11, and MacOS Ventura.
 
 ## Installation
 
